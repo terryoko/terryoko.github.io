@@ -134,7 +134,132 @@
       </div>
     </article>
 
+    Here is the updated code with the two new publications replacing the old ones.
 
+I have:
+
+1. **Highlighted your name** in the author lists.
+2. **Fixed the ID issue** so the "Read more" buttons work independently (`desc-1` and `desc-2`).
+3. **Added placeholders** for the links (`href="#"`) and descriptions, as those weren't included in your prompt. You can fill those in when ready.
+
+```html
+<div class="container">
+      <h1 class="header-name">Selected Publications</h1>
+
+      <div class="publication-item">
+        <div class="pub-title">
+          <a href="#" target="_blank">
+            Evaluating Prompting Strategies for African Languages in Low-Resource NLP
+          </a>
+        </div>
+        <div class="pub-authors">
+          Anuj Tiwari, Oluwapelumi Ogunremu, <span class="author-highlight">Terry Oko-odion</span>, Hannah Nwokocha, Jesujuwon Egbewale
+        </div>
+        <div class="pub-venue" title="European Chapter of the Association for Computational Linguistics">
+          Under review at the LoResLM Workshop (EACL 2026)
+        </div>
+        <div class="pub-description" id="desc-1" style="display: none;">
+          Description coming soon...
+        </div>
+        <button class="read-more-btn" onclick="toggleDescription('desc-1', this)" aria-expanded="false">Read more ▼</button>
+      </div>
+
+      <div class="publication-item">
+        <div class="pub-title">
+          <a href="#" target="_blank">
+            Sample-Size Scaling of the African Languages NLI Evaluation
+          </a>
+        </div>
+        <div class="pub-authors">
+          Anuj Tiwari, Oluwapelumi Ogunremu, <span class="author-highlight">Terry Oko-odion</span>, Hannah Nwokocha, Jesujuwon Egbewale
+        </div>
+        <div class="pub-venue" title="European Chapter of the Association for Computational Linguistics">
+          Under review at the AfricaNLP Workshop (EACL 2026)
+        </div>
+        <div class="pub-description" id="desc-2" style="display: none;">
+           Description coming soon...
+        </div>
+        <button class="read-more-btn" onclick="toggleDescription('desc-2', this)" aria-expanded="false">Read more ▼</button>
+      </div>
+      
+      <div class="read-more-button">
+        <a href="publications.html">Complete Publication List</a>
+      </div>
+    </div>
+
+    <script>
+      function toggleDescription(descId, button) {
+        const desc = document.getElementById(descId);
+        const isHidden = desc.style.display === 'none';
+        
+        if (isHidden) {
+          desc.style.display = 'block';
+          button.textContent = 'Read less ▲';
+        } else {
+          desc.style.display = 'none';
+          button.textContent = 'Read more ▼';
+        }
+      }
+    </script>
+
+    <div class="container">
+      <h1 class="header-name">Selected Publications</h1>
+
+      <div class="publication-item">
+        <div class="pub-title">
+          <a href="#" target="_blank">
+            Evaluating Prompting Strategies for African Languages in Low-Resource NLP
+          </a>
+        </div>
+        <div class="pub-authors">
+          Anuj Tiwari, Oluwapelumi Ogunremu, <span class="author-highlight">Terry Oko-odion</span>, Hannah Nwokocha, Jesujuwon Egbewale
+        </div>
+        <div class="pub-venue" title="European Chapter of the Association for Computational Linguistics">
+          Under review at the LoResLM Workshop (EACL 2026)
+        </div>
+        <div class="pub-description" id="desc-1" style="display: none;">
+          Description coming soon...
+        </div>
+        <button class="read-more-btn" onclick="toggleDescription('desc-1', this)" aria-expanded="false">Read more ▼</button>
+      </div>
+
+      <div class="publication-item">
+        <div class="pub-title">
+          <a href="#" target="_blank">
+            Sample-Size Scaling of the African Languages NLI Evaluation
+          </a>
+        </div>
+        <div class="pub-authors">
+          Anuj Tiwari, Oluwapelumi Ogunremu, <span class="author-highlight">Terry Oko-odion</span>, Hannah Nwokocha, Jesujuwon Egbewale
+        </div>
+        <div class="pub-venue" title="European Chapter of the Association for Computational Linguistics">
+          Under review at the AfricaNLP Workshop (EACL 2026)
+        </div>
+        <div class="pub-description" id="desc-2" style="display: none;">
+           Description coming soon...
+        </div>
+        <button class="read-more-btn" onclick="toggleDescription('desc-2', this)" aria-expanded="false">Read more ▼</button>
+      </div>
+      
+      <div class="read-more-button">
+        <a href="publications.html">Complete Publication List</a>
+      </div>
+    </div>
+
+    <script>
+      function toggleDescription(descId, button) {
+        const desc = document.getElementById(descId);
+        const isHidden = desc.style.display === 'none';
+        
+        if (isHidden) {
+          desc.style.display = 'block';
+          button.textContent = 'Read less ▲';
+        } else {
+          desc.style.display = 'none';
+          button.textContent = 'Read more ▼';
+        }
+      }
+    </script>
 
     <div class="container">
       <h1 class="header-name">Recent Highlights</h1>
