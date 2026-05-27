@@ -741,7 +741,7 @@ button, input, textarea, select {
   }
   
   .site-header .container {
-    padding: 0.5rem var(--space-md);
+    padding: 0.3rem var(--space-md);
   }
   
   .nav {
