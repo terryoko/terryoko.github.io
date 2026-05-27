@@ -124,20 +124,53 @@ button, input, textarea, select {
    HEADER & NAVIGATION
    ========================================== */
 
+.site-header.shrink {
+  padding: 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.site-header.shrink .nav {
+  padding: 4px 0;
+}
+
+.site-header.shrink .logo a {
+  font-size: 1rem;
+}
+
+.site-header.shrink .navbar li a {
+  font-size: 0.85rem;
+}
+
 .site-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  z-index: 1000;
+  transition: all 0.35s ease;
+}
+
+/* .site-header {
   border-bottom: 1px solid var(--border-color);
   background-color: #fff;
   box-shadow: var(--shadow-subtle);
   position: sticky;
   top: 0;
   z-index: 100;
-}
+} */
 
 .nav {
+  padding: 14px 0;
+  transition: all 0.35s ease;
+}
+
+/* .nav {
   min-height: 50px;
   display: flex;
   align-items: center;
-}
+} */
 
 .flex-wrap {
   display: flex;
@@ -147,13 +180,20 @@ button, input, textarea, select {
   width: 100%;
 }
 
-.logo {
+.logo a {
   font-size: var(--font-size-xl);
   font-weight: 600;
   color: var(--primary-color);
   letter-spacing: -0.3px;
-  transition: color var(--transition);
+  transition: all 0.35s ease;
 }
+
+  /* font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--primary-color);
+  letter-spacing: -0.3px;
+  transition: color var(--transition);
+} */
 
 .logo:hover {
   color: var(--primary-hover);
@@ -164,11 +204,13 @@ button, input, textarea, select {
   display: flex;
   margin: 0;
   padding: 0;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.navbar li {
+/* .navbar li {
   margin: 0 var(--space-xs);
-}
+} */
 
 .navbar a {
   display: block;
