@@ -113,7 +113,7 @@ button, input, textarea, select {
 .container {
   margin: 0 auto;
   max-width: var(--max-width);
-  padding: var(--space-lg) var(--space-sm);
+  /* padding: var(--space-lg) var(--space-sm); */
 }
 
 .section-spacing {
@@ -162,7 +162,7 @@ button, input, textarea, select {
 } */
 
 .nav {
-  padding: 8px 0;
+  padding: 0px 0;
   transition: all 0.35s ease;
 }
 
